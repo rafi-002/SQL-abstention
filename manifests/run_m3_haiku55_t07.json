@@ -1,0 +1,327 @@
+{
+ "run_name": "m3_haiku55_t07",
+ "date": "2026-11-03",
+ "model": "anthropic/claude-haiku-5.5",
+ "temperature": 0.7,
+ "prompt_version": "v1",
+ "runs": 1080,
+ "tasks": 135,
+ "databases": 30,
+ "final_status": {
+  "submitted": 1057,
+  "step_limit": 16,
+  "token_budget": 7
+ },
+ "harness_error_records_retried": 8,
+ "harness_error_cause": "4 transient APIConnectionError during main run; 4 key-less retries ($0); all 4 runs completed on retry",
+ "benchmark_correct_runs": 652,
+ "benchmark_accuracy_runs": 0.6037,
+ "tasks_all_right": 62,
+ "tasks_all_wrong": 32,
+ "tasks_mixed": 41,
+ "tasks_by_num_correct_of_8": {
+  "0": 32,
+  "1": 12,
+  "2": 3,
+  "3": 4,
+  "4": 5,
+  "5": 3,
+  "6": 7,
+  "7": 7,
+  "8": 62
+ },
+ "tasks_majority_correct": 79,
+ "total_cost_usd": 3.5323,
+ "cost_per_run_median": 0.0023,
+ "cost_per_run_max": 0.0198,
+ "steps_median": 3.0,
+ "per_database": {
+  "AdventureWorks": {
+   "tasks": 1,
+   "runs": 8,
+   "accuracy": 0.5
+  },
+  "Airlines": {
+   "tasks": 2,
+   "runs": 16,
+   "accuracy": 0.5
+  },
+  "Baseball": {
+   "tasks": 2,
+   "runs": 16,
+   "accuracy": 0.25
+  },
+  "BowlingLeague": {
+   "tasks": 1,
+   "runs": 8,
+   "accuracy": 1.0
+  },
+  "Brazilian_E_Commerce": {
+   "tasks": 8,
+   "runs": 64,
+   "accuracy": 0.609
+  },
+  "California_Traffic_Collision": {
+   "tasks": 3,
+   "runs": 24,
+   "accuracy": 0.083
+  },
+  "Db-IMDB": {
+   "tasks": 5,
+   "runs": 40,
+   "accuracy": 0.825
+  },
+  "EU_soccer": {
+   "tasks": 5,
+   "runs": 40,
+   "accuracy": 0.825
+  },
+  "E_commerce": {
+   "tasks": 3,
+   "runs": 24,
+   "accuracy": 0.167
+  },
+  "EntertainmentAgency": {
+   "tasks": 3,
+   "runs": 24,
+   "accuracy": 0.583
+  },
+  "IPL": {
+   "tasks": 11,
+   "runs": 88,
+   "accuracy": 0.625
+  },
+  "Pagila": {
+   "tasks": 2,
+   "runs": 16,
+   "accuracy": 1.0
+  },
+  "WWE": {
+   "tasks": 1,
+   "runs": 8,
+   "accuracy": 1.0
+  },
+  "bank_sales_trading": {
+   "tasks": 15,
+   "runs": 120,
+   "accuracy": 0.6
+  },
+  "chinook": {
+   "tasks": 3,
+   "runs": 24,
+   "accuracy": 0.667
+  },
+  "city_legislation": {
+   "tasks": 10,
+   "runs": 80,
+   "accuracy": 0.912
+  },
+  "complex_oracle": {
+   "tasks": 6,
+   "runs": 48,
+   "accuracy": 0.688
+  },
+  "delivery_center": {
+   "tasks": 3,
+   "runs": 24,
+   "accuracy": 0.667
+  },
+  "education_business": {
+   "tasks": 5,
+   "runs": 40,
+   "accuracy": 0.6
+  },
+  "electronic_sales": {
+   "tasks": 1,
+   "runs": 8,
+   "accuracy": 0.5
+  },
+  "f1": {
+   "tasks": 9,
+   "runs": 72,
+   "accuracy": 0.347
+  },
+  "imdb_movies": {
+   "tasks": 2,
+   "runs": 16,
+   "accuracy": 0.5
+  },
+  "log": {
+   "tasks": 5,
+   "runs": 40,
+   "accuracy": 0.225
+  },
+  "modern_data": {
+   "tasks": 7,
+   "runs": 56,
+   "accuracy": 0.696
+  },
+  "music": {
+   "tasks": 1,
+   "runs": 8,
+   "accuracy": 1.0
+  },
+  "northwind": {
+   "tasks": 2,
+   "runs": 16,
+   "accuracy": 1.0
+  },
+  "oracle_sql": {
+   "tasks": 8,
+   "runs": 64,
+   "accuracy": 0.5
+  },
+  "school_scheduling": {
+   "tasks": 1,
+   "runs": 8,
+   "accuracy": 0.0
+  },
+  "sqlite-sakila": {
+   "tasks": 7,
+   "runs": 56,
+   "accuracy": 0.732
+  },
+  "stacking": {
+   "tasks": 3,
+   "runs": 24,
+   "accuracy": 0.333
+  }
+ },
+ "per_task_correct_of_8": {
+  "local002": 3,
+  "local003": 0,
+  "local004": 1,
+  "local007": 0,
+  "local008": 4,
+  "local009": 8,
+  "local010": 0,
+  "local015": 0,
+  "local017": 0,
+  "local018": 2,
+  "local019": 8,
+  "local020": 7,
+  "local021": 7,
+  "local022": 8,
+  "local023": 0,
+  "local024": 8,
+  "local025": 7,
+  "local026": 8,
+  "local028": 0,
+  "local029": 3,
+  "local030": 8,
+  "local031": 1,
+  "local032": 6,
+  "local034": 6,
+  "local035": 8,
+  "local037": 7,
+  "local038": 8,
+  "local039": 8,
+  "local040": 8,
+  "local041": 8,
+  "local049": 0,
+  "local050": 7,
+  "local054": 8,
+  "local055": 8,
+  "local056": 0,
+  "local058": 8,
+  "local059": 0,
+  "local060": 1,
+  "local061": 8,
+  "local062": 8,
+  "local063": 1,
+  "local064": 0,
+  "local065": 8,
+  "local066": 6,
+  "local067": 8,
+  "local068": 8,
+  "local070": 8,
+  "local071": 8,
+  "local072": 8,
+  "local073": 1,
+  "local074": 8,
+  "local075": 8,
+  "local077": 6,
+  "local078": 8,
+  "local081": 8,
+  "local085": 8,
+  "local096": 2,
+  "local097": 8,
+  "local098": 7,
+  "local099": 8,
+  "local100": 8,
+  "local114": 8,
+  "local128": 8,
+  "local130": 0,
+  "local131": 5,
+  "local132": 4,
+  "local133": 5,
+  "local141": 4,
+  "local152": 0,
+  "local156": 8,
+  "local157": 1,
+  "local163": 8,
+  "local167": 8,
+  "local168": 4,
+  "local169": 8,
+  "local170": 8,
+  "local171": 5,
+  "local193": 8,
+  "local194": 1,
+  "local195": 8,
+  "local196": 8,
+  "local197": 8,
+  "local198": 0,
+  "local199": 8,
+  "local201": 8,
+  "local202": 8,
+  "local209": 0,
+  "local210": 8,
+  "local212": 8,
+  "local218": 8,
+  "local219": 8,
+  "local220": 3,
+  "local221": 8,
+  "local228": 6,
+  "local229": 3,
+  "local230": 8,
+  "local244": 8,
+  "local253": 0,
+  "local258": 1,
+  "local259": 0,
+  "local262": 8,
+  "local263": 0,
+  "local264": 0,
+  "local269": 8,
+  "local270": 8,
+  "local272": 0,
+  "local273": 0,
+  "local274": 8,
+  "local275": 8,
+  "local277": 0,
+  "local279": 0,
+  "local283": 6,
+  "local284": 2,
+  "local285": 0,
+  "local286": 4,
+  "local297": 0,
+  "local298": 7,
+  "local299": 0,
+  "local300": 8,
+  "local301": 8,
+  "local302": 8,
+  "local309": 0,
+  "local310": 8,
+  "local311": 8,
+  "local329": 8,
+  "local330": 1,
+  "local331": 0,
+  "local335": 6,
+  "local336": 0,
+  "local344": 1,
+  "local354": 0,
+  "local355": 1,
+  "local356": 1,
+  "local358": 0,
+  "local360": 0
+ }
+}

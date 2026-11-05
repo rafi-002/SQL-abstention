@@ -1,0 +1,11 @@
+{
+ "run_name": "m3_haiku55_t07",
+ "comment": "PAID M3 main collection: all 135 Spider 2.0-Lite SQLite tasks x 8 runs. User go 2026-11-03 (8 runs, T=0.7, cap $5). Estimate ~$1.7 from the smoke test.",
+ "agent_llm": {"provider": "openrouter", "model": "anthropic/claude-haiku-5.5", "price_in_per_m": 0.1, "price_out_per_m": 0.5,
+               "temperature": 0.7, "max_output_tokens": 2048, "retries": 5, "backoff_cap_s": 60},
+ "agent": {"max_steps": 15, "token_budget": 120000, "row_cap": 50, "sql_timeout_s": 30, "obs_max_chars": 6000},
+ "runs_per_task": 8,
+ "seed_base": 0,
+ "workers": 4,
+ "spend_cap_usd": 5.0
+}

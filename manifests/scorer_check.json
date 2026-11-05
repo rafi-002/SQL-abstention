@@ -1,0 +1,152 @@
+{
+ "n_tasks": 135,
+ "n_gold_csv": 328,
+ "gold_csv_self_match_failures": {},
+ "gold_sql_scored": {
+  "local003": {
+   "status": "scored",
+   "score": 0,
+   "error_info": "Result Error",
+   "seconds": 7.3
+  },
+  "local004": {
+   "status": "scored",
+   "score": 1,
+   "error_info": null,
+   "seconds": 3.4
+  },
+  "local008": {
+   "status": "scored",
+   "score": 1,
+   "error_info": null,
+   "seconds": 1.3
+  },
+  "local017": {
+   "status": "scored",
+   "score": 1,
+   "error_info": null,
+   "seconds": 1.3
+  },
+  "local019": {
+   "status": "scored",
+   "score": 1,
+   "error_info": null,
+   "seconds": 1.3
+  },
+  "local022": {
+   "status": "scored",
+   "score": 1,
+   "error_info": null,
+   "seconds": 1.0
+  },
+  "local023": {
+   "status": "scored",
+   "score": 0,
+   "error_info": "Result Error",
+   "seconds": 1.0
+  },
+  "local029": {
+   "status": "scored",
+   "score": 0,
+   "error_info": "Result Error",
+   "seconds": 3.4
+  },
+  "local038": {
+   "status": "scored",
+   "score": 1,
+   "error_info": null,
+   "seconds": 1.0
+  },
+  "local039": {
+   "status": "scored",
+   "score": 1,
+   "error_info": null,
+   "seconds": 1.0
+  },
+  "local058": {
+   "status": "scored",
+   "score": 1,
+   "error_info": null,
+   "seconds": 1.6
+  },
+  "local066": {
+   "status": "scored",
+   "score": 0,
+   "error_info": "Result Error",
+   "seconds": 1.1
+  },
+  "local065": {
+   "status": "scored",
+   "score": 1,
+   "error_info": null,
+   "seconds": 1.1
+  },
+  "local075": {
+   "status": "scored",
+   "score": 1,
+   "error_info": null,
+   "seconds": 39.5
+  },
+  "local078": {
+   "status": "scored",
+   "score": 1,
+   "error_info": null,
+   "seconds": 1.1
+  },
+  "local099": {
+   "status": "scored",
+   "score": 1,
+   "error_info": null,
+   "seconds": 28.2
+  },
+  "local131": {
+   "status": "scored",
+   "score": 0,
+   "error_info": "Result Error",
+   "seconds": 0.9
+  },
+  "local163": {
+   "status": "scored",
+   "score": 1,
+   "error_info": null,
+   "seconds": 1.0
+  },
+  "local197": {
+   "status": "scored",
+   "score": 1,
+   "error_info": null,
+   "seconds": 1.0
+  },
+  "local199": {
+   "status": "scored",
+   "score": 1,
+   "error_info": null,
+   "seconds": 1.0
+  },
+  "local210": {
+   "status": "scored",
+   "score": 0,
+   "error_info": "Result Error",
+   "seconds": 1.3
+  },
+  "local219": {
+   "status": "scored",
+   "score": 0,
+   "error_info": "Result Error",
+   "seconds": 2.3
+  },
+  "local301": {
+   "status": "scored",
+   "score": 1,
+   "error_info": null,
+   "seconds": 1.2
+  },
+  "local309": {
+   "status": "scored",
+   "score": 0,
+   "error_info": "Result Error",
+   "seconds": 1.3
+  }
+ },
+ "gold_sql_reproduces": "16/24"
+}

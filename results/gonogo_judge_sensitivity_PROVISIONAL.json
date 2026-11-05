@@ -1,0 +1,296 @@
+{
+ "lenient": {
+  "modal_error": 0.097,
+  "bench->lenient a=0.1": {
+   "ldo5": {
+    "splits": 5,
+    "violation_rate": 0.0,
+    "mean_test_risk_when_answering": null,
+    "pooled_test_risk": 0.0,
+    "mean_coverage": 0.0,
+    "share_abstain_all": 1.0
+   },
+   "rdb": {
+    "splits": 2000,
+    "violation_rate": 0.0,
+    "mean_test_risk_when_answering": null,
+    "pooled_test_risk": 0.0,
+    "mean_coverage": 0.0,
+    "share_abstain_all": 1.0
+   }
+  },
+  "bench->lenient a=0.2": {
+   "ldo5": {
+    "splits": 5,
+    "violation_rate": 0.0,
+    "mean_test_risk_when_answering": null,
+    "pooled_test_risk": 0.0,
+    "mean_coverage": 0.0,
+    "share_abstain_all": 1.0
+   },
+   "rdb": {
+    "splits": 2000,
+    "violation_rate": 0.0,
+    "mean_test_risk_when_answering": null,
+    "pooled_test_risk": 0.0,
+    "mean_coverage": 0.0,
+    "share_abstain_all": 1.0
+   }
+  },
+  "bench->lenient a=0.3": {
+   "ldo5": {
+    "splits": 5,
+    "violation_rate": 0.0,
+    "mean_test_risk_when_answering": null,
+    "pooled_test_risk": 0.0,
+    "mean_coverage": 0.0,
+    "share_abstain_all": 1.0
+   },
+   "rdb": {
+    "splits": 2000,
+    "violation_rate": 0.0,
+    "mean_test_risk_when_answering": 0.053,
+    "pooled_test_risk": 0.054,
+    "mean_coverage": 0.072,
+    "share_abstain_all": 0.872
+   }
+  },
+  "bench->lenient a=0.4": {
+   "ldo5": {
+    "splits": 5,
+    "violation_rate": 0.0,
+    "mean_test_risk_when_answering": 0.067,
+    "pooled_test_risk": 0.071,
+    "mean_coverage": 0.837,
+    "share_abstain_all": 0.0
+   },
+   "rdb": {
+    "splits": 2000,
+    "violation_rate": 0.0,
+    "mean_test_risk_when_answering": 0.066,
+    "pooled_test_risk": 0.068,
+    "mean_coverage": 0.762,
+    "share_abstain_all": 0.048
+   }
+  },
+  "judge->lenient a=0.1": {
+   "ldo5": {
+    "splits": 5,
+    "violation_rate": 0.0,
+    "mean_test_risk_when_answering": 0.045,
+    "pooled_test_risk": 0.045,
+    "mean_coverage": 0.163,
+    "share_abstain_all": 0.8
+   },
+   "rdb": {
+    "splits": 2000,
+    "violation_rate": 0.062,
+    "mean_test_risk_when_answering": 0.084,
+    "pooled_test_risk": 0.088,
+    "mean_coverage": 0.155,
+    "share_abstain_all": 0.775
+   }
+  },
+  "judge->lenient a=0.2": {
+   "ldo5": {
+    "splits": 5,
+    "violation_rate": 0.0,
+    "mean_test_risk_when_answering": 0.097,
+    "pooled_test_risk": 0.097,
+    "mean_coverage": 0.993,
+    "share_abstain_all": 0.0
+   },
+   "rdb": {
+    "splits": 2000,
+    "violation_rate": 0.052,
+    "mean_test_risk_when_answering": 0.098,
+    "pooled_test_risk": 0.098,
+    "mean_coverage": 0.993,
+    "share_abstain_all": 0.0
+   }
+  },
+  "judge->lenient a=0.3": {
+   "ldo5": {
+    "splits": 5,
+    "violation_rate": 0.0,
+    "mean_test_risk_when_answering": 0.097,
+    "pooled_test_risk": 0.097,
+    "mean_coverage": 0.993,
+    "share_abstain_all": 0.0
+   },
+   "rdb": {
+    "splits": 2000,
+    "violation_rate": 0.0,
+    "mean_test_risk_when_answering": 0.098,
+    "pooled_test_risk": 0.098,
+    "mean_coverage": 0.993,
+    "share_abstain_all": 0.0
+   }
+  },
+  "judge->lenient a=0.4": {
+   "ldo5": {
+    "splits": 5,
+    "violation_rate": 0.0,
+    "mean_test_risk_when_answering": 0.097,
+    "pooled_test_risk": 0.097,
+    "mean_coverage": 0.993,
+    "share_abstain_all": 0.0
+   },
+   "rdb": {
+    "splits": 2000,
+    "violation_rate": 0.0,
+    "mean_test_risk_when_answering": 0.098,
+    "pooled_test_risk": 0.098,
+    "mean_coverage": 0.993,
+    "share_abstain_all": 0.0
+   }
+  }
+ },
+ "strict": {
+  "modal_error": 0.2612,
+  "bench->strict a=0.1": {
+   "ldo5": {
+    "splits": 5,
+    "violation_rate": 0.0,
+    "mean_test_risk_when_answering": null,
+    "pooled_test_risk": 0.0,
+    "mean_coverage": 0.0,
+    "share_abstain_all": 1.0
+   },
+   "rdb": {
+    "splits": 2000,
+    "violation_rate": 0.0,
+    "mean_test_risk_when_answering": null,
+    "pooled_test_risk": 0.0,
+    "mean_coverage": 0.0,
+    "share_abstain_all": 1.0
+   }
+  },
+  "bench->strict a=0.2": {
+   "ldo5": {
+    "splits": 5,
+    "violation_rate": 0.0,
+    "mean_test_risk_when_answering": null,
+    "pooled_test_risk": 0.0,
+    "mean_coverage": 0.0,
+    "share_abstain_all": 1.0
+   },
+   "rdb": {
+    "splits": 2000,
+    "violation_rate": 0.0,
+    "mean_test_risk_when_answering": null,
+    "pooled_test_risk": 0.0,
+    "mean_coverage": 0.0,
+    "share_abstain_all": 1.0
+   }
+  },
+  "bench->strict a=0.3": {
+   "ldo5": {
+    "splits": 5,
+    "violation_rate": 0.0,
+    "mean_test_risk_when_answering": null,
+    "pooled_test_risk": 0.0,
+    "mean_coverage": 0.0,
+    "share_abstain_all": 1.0
+   },
+   "rdb": {
+    "splits": 2000,
+    "violation_rate": 0.007,
+    "mean_test_risk_when_answering": 0.179,
+    "pooled_test_risk": 0.176,
+    "mean_coverage": 0.072,
+    "share_abstain_all": 0.872
+   }
+  },
+  "bench->strict a=0.4": {
+   "ldo5": {
+    "splits": 5,
+    "violation_rate": 0.0,
+    "mean_test_risk_when_answering": 0.214,
+    "pooled_test_risk": 0.221,
+    "mean_coverage": 0.837,
+    "share_abstain_all": 0.0
+   },
+   "rdb": {
+    "splits": 2000,
+    "violation_rate": 0.005,
+    "mean_test_risk_when_answering": 0.202,
+    "pooled_test_risk": 0.205,
+    "mean_coverage": 0.762,
+    "share_abstain_all": 0.048
+   }
+  },
+  "judge->strict a=0.1": {
+   "ldo5": {
+    "splits": 5,
+    "violation_rate": 0.0,
+    "mean_test_risk_when_answering": null,
+    "pooled_test_risk": 0.0,
+    "mean_coverage": 0.0,
+    "share_abstain_all": 1.0
+   },
+   "rdb": {
+    "splits": 2000,
+    "violation_rate": 0.0,
+    "mean_test_risk_when_answering": null,
+    "pooled_test_risk": 0.0,
+    "mean_coverage": 0.0,
+    "share_abstain_all": 1.0
+   }
+  },
+  "judge->strict a=0.2": {
+   "ldo5": {
+    "splits": 5,
+    "violation_rate": 0.0,
+    "mean_test_risk_when_answering": 0.132,
+    "pooled_test_risk": 0.133,
+    "mean_coverage": 0.222,
+    "share_abstain_all": 0.4
+   },
+   "rdb": {
+    "splits": 2000,
+    "violation_rate": 0.206,
+    "mean_test_risk_when_answering": 0.2,
+    "pooled_test_risk": 0.212,
+    "mean_coverage": 0.176,
+    "share_abstain_all": 0.534
+   }
+  },
+  "judge->strict a=0.3": {
+   "ldo5": {
+    "splits": 5,
+    "violation_rate": 0.2,
+    "mean_test_risk_when_answering": 0.221,
+    "pooled_test_risk": 0.224,
+    "mean_coverage": 0.926,
+    "share_abstain_all": 0.0
+   },
+   "rdb": {
+    "splits": 2000,
+    "violation_rate": 0.206,
+    "mean_test_risk_when_answering": 0.23,
+    "pooled_test_risk": 0.237,
+    "mean_coverage": 0.91,
+    "share_abstain_all": 0.0
+   }
+  },
+  "judge->strict a=0.4": {
+   "ldo5": {
+    "splits": 5,
+    "violation_rate": 0.0,
+    "mean_test_risk_when_answering": 0.261,
+    "pooled_test_risk": 0.261,
+    "mean_coverage": 0.993,
+    "share_abstain_all": 0.0
+   },
+   "rdb": {
+    "splits": 2000,
+    "violation_rate": 0.041,
+    "mean_test_risk_when_answering": 0.263,
+    "pooled_test_risk": 0.264,
+    "mean_coverage": 0.993,
+    "share_abstain_all": 0.0
+   }
+  }
+ }
+}

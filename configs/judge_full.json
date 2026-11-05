@@ -1,0 +1,20 @@
+{
+ "run_name": "judge_gpt61sol",
+ "comment": "PAID judge_full: LLM judge for hybrid audit (protocol v0.3 \u00a713). User go 2026-11-04 (cap $25). Retry of 7 unfinished questions with max_steps 16 and judge-v1.1 reminder.",
+ "judge_llm": {
+  "provider": "openrouter",
+  "model": "openai/gpt-6.1-sol",
+  "price_in_per_m": 2.0,
+  "price_out_per_m": 10.0,
+  "temperature": 0.0,
+  "max_output_tokens": 4096,
+  "retries": 5,
+  "backoff_cap_s": 60
+ },
+ "max_steps": 16,
+ "token_budget": 200000,
+ "obs_max_chars": 6000,
+ "questions": "all",
+ "workers": 4,
+ "spend_cap_usd": 25.0
+}

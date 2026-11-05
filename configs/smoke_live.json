@@ -1,0 +1,12 @@
+{
+ "run_name": "smoke_live",
+ "comment": "PAID live smoke test: 3 tasks x 2 runs. Needs the user's explicit go and OPENROUTER_API_KEY in the shell. CHECK PRICES on openrouter.ai before running.",
+ "agent_llm": {"provider": "openrouter", "model": "anthropic/claude-haiku-5.5", "price_in_per_m": 0.1, "price_out_per_m": 0.5,
+               "temperature": 0.7, "max_output_tokens": 2048, "retries": 5, "backoff_cap_s": 60},
+ "agent": {"max_steps": 15, "token_budget": 120000, "row_cap": 50, "sql_timeout_s": 30, "obs_max_chars": 6000},
+ "task_ids": ["local004", "local023", "local131"],
+ "runs_per_task": 2,
+ "seed_base": 0,
+ "workers": 2,
+ "spend_cap_usd": 1.0
+}

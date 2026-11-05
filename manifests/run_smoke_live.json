@@ -1,0 +1,95 @@
+{
+ "run_name": "smoke_live",
+ "date": "2026-11-03",
+ "model": "anthropic/claude-haiku-5.5",
+ "temperature": 0.7,
+ "prompt_version": "v1",
+ "cost_source": "provider (OpenRouter usage)",
+ "total_cost_usd": 0.0094,
+ "runs": [
+  {
+   "run_id": "local004__r00",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 0,
+    "error_info": "Result Error"
+   },
+   "n_steps": 3,
+   "input_tokens": 7747,
+   "output_tokens": 1889,
+   "cost_usd": 0.001719,
+   "seconds": 32.5
+  },
+  {
+   "run_id": "local004__r01",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 0,
+    "error_info": "Result Error"
+   },
+   "n_steps": 4,
+   "input_tokens": 12543,
+   "output_tokens": 2634,
+   "cost_usd": 0.002571,
+   "seconds": 37.7
+  },
+  {
+   "run_id": "local023__r00",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 0,
+    "error_info": "Result Error"
+   },
+   "n_steps": 3,
+   "input_tokens": 6155,
+   "output_tokens": 1372,
+   "cost_usd": 0.001301,
+   "seconds": 8.9
+  },
+  {
+   "run_id": "local131__r00",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 1,
+    "error_info": null
+   },
+   "n_steps": 1,
+   "input_tokens": 2779,
+   "output_tokens": 543,
+   "cost_usd": 0.000549,
+   "seconds": 4.7
+  },
+  {
+   "run_id": "local023__r01",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 0,
+    "error_info": "Result Error"
+   },
+   "n_steps": 4,
+   "input_tokens": 8774,
+   "output_tokens": 1833,
+   "cost_usd": 0.001794,
+   "seconds": 11.0
+  },
+  {
+   "run_id": "local131__r01",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 0,
+    "error_info": "Result Error"
+   },
+   "n_steps": 3,
+   "input_tokens": 9637,
+   "output_tokens": 1028,
+   "cost_usd": 0.001478,
+   "seconds": 7.2
+  }
+ ]
+}

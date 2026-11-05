@@ -1,0 +1,26 @@
+{
+ "run_name": "judge_gpt61sol",
+ "comment": "PAID judge_pilot: LLM judge for hybrid audit (protocol v0.3 \u00a713). User go 2026-11-04 (cap $2).",
+ "judge_llm": {
+  "provider": "openrouter",
+  "model": "openai/gpt-6.1-sol",
+  "price_in_per_m": 2.0,
+  "price_out_per_m": 10.0,
+  "temperature": 0.0,
+  "max_output_tokens": 4096,
+  "retries": 5,
+  "backoff_cap_s": 60
+ },
+ "max_steps": 10,
+ "token_budget": 200000,
+ "obs_max_chars": 6000,
+ "questions": [
+  "local009",
+  "local024",
+  "local077",
+  "local197",
+  "local274"
+ ],
+ "workers": 4,
+ "spend_cap_usd": 2.0
+}

@@ -1,0 +1,52 @@
+{
+ "run": "m3_haiku55_t07",
+ "labels": "benchmark",
+ "n": 135,
+ "single_feature_auroc": {
+  "k": 0.734,
+  "k_loose": 0.764,
+  "n_distinct": 0.301,
+  "noans": 0.46,
+  "mean_steps": 0.319,
+  "mean_sql_errors": 0.407,
+  "mean_out_tokens": 0.333,
+  "modal_rows": 0.45,
+  "modal_cols": 0.448,
+  "has_doc": 0.469,
+  "q_len": 0.403
+ },
+ "combined": {
+  "k only": {
+   "auroc_oof": 0.708,
+   "error_at_coverage": {
+    "0.25": 0.265,
+    "0.5": 0.206,
+    "0.75": 0.307
+   }
+  },
+  "k_loose only": {
+   "auroc_oof": 0.728,
+   "error_at_coverage": {
+    "0.25": 0.265,
+    "0.5": 0.206,
+    "0.75": 0.257
+   }
+  },
+  "agreement (k, k_loose, n_distinct, noans)": {
+   "auroc_oof": 0.722,
+   "error_at_coverage": {
+    "0.25": 0.235,
+    "0.5": 0.221,
+    "0.75": 0.257
+   }
+  },
+  "all features": {
+   "auroc_oof": 0.711,
+   "error_at_coverage": {
+    "0.25": 0.235,
+    "0.5": 0.235,
+    "0.75": 0.287
+   }
+  }
+ }
+}
