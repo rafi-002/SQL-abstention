@@ -24,7 +24,7 @@ Two things can break it:
   - 2,000 random held-out-database splits;
   - 2,000 random question splits (seed 20261105).
 - **Settings:** δ = 0.1. The analysis plan was fixed before any result was computed.
-- **Alternative labels:** an LLM judge (`openai/gpt-6.1-sol`, `tools/llm_judge.py`) re-graded every candidate answer blind, from a different model family than the agent.
+- **Alternative labels:** an LLM judge (`openai/gpt-6.1-sol`, `tools/llm_judge.py`) re-graded every candidate answer blind, from a different model family than the agent. A second judge from a third family (`google/gemini-3.8-flash`, same tool, configs `configs/judge2_pilot.json` and `configs/judge2_full.json`) repeated this as a cross-check (Result 3).
 
 ## Result 1: graded by the benchmark answer key (`results/gonogo_bench_bench.json`)
 The agent's main answer is wrong on 38.5% of questions according to the key.
@@ -63,6 +63,34 @@ At α ≤ 0.3 the method stays vacuous under every grader, because calibration o
 - **Lenient:** α = 0.2 holds at **99% coverage** (risk 0.098). With benchmark calibration it is vacuous.
 - **Strict:** α = 0.2–0.3 shows a held-out-database violation rate of 0.206, which hints at a database-shift effect. This is exploratory and not pre-registered.
 
+## Result 3: a second AI judge (`results/gonogo_two_judges_PROVISIONAL.json`)
+Same protocol, same blinded packets, same rules, graded by `google/gemini-3.8-flash`. Calibration still uses the benchmark key; only the grading of the test answers changes. 134 of 135 questions were submitted (local096 never was, so its main answer is excluded).
+
+**Do the two judges agree?**
+- On 619 tables graded by both: 80.5% agreement, Cohen's kappa 0.50.
+- On the 132 main answers: 117 of 132 (88.6%).
+
+**Error of the agent's main answer**
+| Grader | Lenient | Strict |
+|---|---|---|
+| benchmark key | 38.5% | 38.5% |
+| Sol | 9.7% | 26.1% |
+| Gemini | 9.8% | 22.6% |
+
+Both judges also reject a similar share of the official answer tables: Sol 22.5%, Gemini 27.7% (of 325 gold-containing tables graded by both).
+
+**Guarantee at α = 0.4 on held-out databases (calibrated on the benchmark key)**
+| Grader | Violation rate (random held-out-DB splits) | Real error of answered questions | Coverage |
+|---|---|---|---|
+| Sol, lenient | 0.000 | 0.07 | 76% |
+| Gemini, lenient | 0.000 | 0.06 | 76% |
+| Sol, strict | 0.005 | 0.21 | 76% |
+| Gemini, strict | 0.009 | 0.17 | 76% |
+
+At α ≤ 0.3 the method stays vacuous under both judges (0% coverage at α ≤ 0.2, 7% at α = 0.3). One of the five fixed folds shows a violation rate of 0.20 under Gemini's strict labels, which is not a pre-registered break.
+
+**What this does and does not show.** The finding does not depend on which AI judge graded: two models from different families agree on about 89% of main answers and give the same picture. It does not show that the judges are right; both could be lenient in the same direction on alternative readings, and no human check has measured that.
+
 ## Conclusion (provisional)
 - **The guarantee holds on unseen databases, but it is over-cautious.** The apparent breaks under the benchmark key disappear when answers are graded by the judge: the key marks many correct answers wrong.
 - The cost of the label errors is lost coverage, not broken promises. The method refuses everything at α ≤ 0.3, where clean labels would allow α = 0.2 with almost full coverage.
@@ -72,3 +100,4 @@ At α ≤ 0.3 the method stays vacuous under every grader, because calibration o
 - Setup and data: see `README.md`.
 - Go/no-go: `python tools/gonogo.py --calib-labels benchmark --test-labels benchmark`, with `--test-labels judge` for the judge version (which needs the judge outputs in `runs/`).
 - Figure: `python tools/make_guarantee_figure.py`.
+- Gemini judge: `python tools/gonogo.py --test-labels judge --judge-run judge_gemini38flash` (needs its outputs in `runs/`). The lenient/strict variants and the single file combining both judges (`results/gonogo_two_judges_PROVISIONAL.json`) come from an analysis script that is not in this repository.

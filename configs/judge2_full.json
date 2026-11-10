@@ -1,0 +1,26 @@
+{
+ "run_name": "judge_gemini38flash",
+ "comment": "PAID second-judge cross-check for the hybrid audit (protocol v0.3 \u00a713): Google Gemini, a third model family, grading every candidate blind. User go 2026-11-04. Independent of the Sol judge; does NOT replace the human sample.",
+ "judge_llm": {
+  "provider": "openrouter",
+  "model": "google/gemini-3.8-flash",
+  "price_in_per_m": 0.825,
+  "price_out_per_m": 4.125,
+  "temperature": 0.0,
+  "max_output_tokens": 4096,
+  "retries": 5,
+  "backoff_cap_s": 60
+ },
+ "max_steps": 26,
+ "token_budget": 200000,
+ "obs_max_chars": 6000,
+ "questions": [
+  "local096",
+  "local168",
+  "local253",
+  "local297",
+  "local331"
+ ],
+ "workers": 4,
+ "spend_cap_usd": 15.0
+}
