@@ -91,6 +91,23 @@ At α ≤ 0.3 the method stays vacuous under both judges (0% coverage at α ≤ 
 
 **What this does and does not show.** The finding does not depend on which AI judge graded: two models from different families agree on about 89% of main answers and give the same picture. It does not show that the judges are right; both could be lenient in the same direction on alternative readings, and no human check has measured that.
 
+## Result 4: other scores and calibrators, and a second agent (`results/score_grid.json`, `results/score_grid_glm53.json`, `results/gonogo_glm53_bench_bench.json`, `results/glm53_per_db_alpha02.json`)
+**Other scores and calibrators (Haiku, no new model calls).** Three scores (run agreement k, loose agreement, answer entropy) times three calibrators (Learn-then-Test, Clopper-Pearson, Hoeffding, the last two with Bonferroni), 324 cells. Under the benchmark key all nine combinations are vacuous at alpha <= 0.2; only loose agreement with Learn-then-Test makes alpha = 0.3 usable (51% coverage). 163 of 324 cells are vacuous; 2 meet the break rule (both with Gemini labels).
+
+**Second agent: GLM-5.3** (`z-ai/glm-5.3`, same prompt and settings, 8 runs on all 135 questions, cost $19.69; both judges on its 692 tables cost $10.97; Gemini has no verdicts for 3 questions).
+| | Haiku 5.5 | GLM-5.3 |
+|---|---|---|
+| Main answer wrong by the key | 38.5% | 41.0% |
+| Questions with all 8 runs agreeing | 41 | 15 |
+| Key labels, alpha <= 0.3 | no usable threshold | no usable threshold |
+| Key labels, alpha = 0.4: violation rate / coverage | 0.216 / 77% | 0.083 / 26% |
+| Vacuous cells of 324 | 163 | 219 |
+| Cells meeting the break rule | 2 | 2 |
+
+With judge labels at alpha = 0.2 (lenient), GLM's held-out-database violation rate is 0.235 (Sol) and 0.219 (Gemini) against 0.168 and 0.090 on random question splits; Haiku's matching cells were 0.03 to 0.05. Leaving out one database at a time, the pooled held-out risk is 0.126 (Sol) and 0.148 (Gemini), inside alpha = 0.2. The databases above alpha are mostly tiny (1 to 3 questions); the one clear outlier on both judges is IPL (5 wrong of 11 answered).
+
+**What this does and does not show.** Under the key the method is vacuous at the strict levels on two model families, so the vacuity is not specific to Haiku. The excess violations under judge labels on GLM are mostly small-test-set noise plus one hard database: a weak lead, not evidence of a failure on new databases. Two agents, one benchmark, one prompt and temperature each; no human-checked labels.
+
 ## Conclusion (provisional)
 - **The guarantee holds on unseen databases, but it is over-cautious.** The apparent breaks under the benchmark key disappear when answers are graded by the judge: the key marks many correct answers wrong.
 - The cost of the label errors is lost coverage, not broken promises. The method refuses everything at α ≤ 0.3, where clean labels would allow α = 0.2 with almost full coverage.

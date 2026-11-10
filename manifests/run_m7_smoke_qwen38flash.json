@@ -1,0 +1,179 @@
+{
+ "run_name": "m7_smoke_qwen38flash",
+ "date": "2026-11-10",
+ "model": "qwen/qwen3.8-flash",
+ "temperature": 0.7,
+ "prompt_version": "v1",
+ "cost_source": "provider (OpenRouter usage)",
+ "total_cost_usd": 0.012,
+ "runs": [
+  {
+   "run_id": "local004__r01",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 0,
+    "error_info": "Result Error"
+   },
+   "n_steps": 3,
+   "input_tokens": 6566,
+   "output_tokens": 1208,
+   "cost_usd": 0.000935,
+   "seconds": 38.3
+  },
+  {
+   "run_id": "local004__r00",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 0,
+    "error_info": "Result Error"
+   },
+   "n_steps": 4,
+   "input_tokens": 9687,
+   "output_tokens": 1495,
+   "cost_usd": 0.001195,
+   "seconds": 46.6
+  },
+  {
+   "run_id": "local004__r03",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 0,
+    "error_info": "Result Error"
+   },
+   "n_steps": 5,
+   "input_tokens": 14464,
+   "output_tokens": 2053,
+   "cost_usd": 0.001659,
+   "seconds": 43.8
+  },
+  {
+   "run_id": "local023__r00",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 0,
+    "error_info": "Result Error"
+   },
+   "n_steps": 4,
+   "input_tokens": 6634,
+   "output_tokens": 926,
+   "cost_usd": 0.000847,
+   "seconds": 19.5
+  },
+  {
+   "run_id": "local004__r02",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 0,
+    "error_info": "Result Error"
+   },
+   "n_steps": 4,
+   "input_tokens": 9983,
+   "output_tokens": 2330,
+   "cost_usd": 0.001632,
+   "seconds": 82.2
+  },
+  {
+   "run_id": "local023__r02",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 0,
+    "error_info": "Result Error"
+   },
+   "n_steps": 5,
+   "input_tokens": 8295,
+   "output_tokens": 1170,
+   "cost_usd": 0.000937,
+   "seconds": 28.2
+  },
+  {
+   "run_id": "local023__r01",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 0,
+    "error_info": "Result Error"
+   },
+   "n_steps": 6,
+   "input_tokens": 13276,
+   "output_tokens": 2106,
+   "cost_usd": 0.001643,
+   "seconds": 42.3
+  },
+  {
+   "run_id": "local131__r00",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 1,
+    "error_info": null
+   },
+   "n_steps": 3,
+   "input_tokens": 6271,
+   "output_tokens": 559,
+   "cost_usd": 0.000723,
+   "seconds": 20.8
+  },
+  {
+   "run_id": "local023__r03",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 0,
+    "error_info": "Result Error"
+   },
+   "n_steps": 4,
+   "input_tokens": 7441,
+   "output_tokens": 1010,
+   "cost_usd": 0.000905,
+   "seconds": 30.0
+  },
+  {
+   "run_id": "local131__r01",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 0,
+    "error_info": "Result Error"
+   },
+   "n_steps": 3,
+   "input_tokens": 6480,
+   "output_tokens": 548,
+   "cost_usd": 0.000543,
+   "seconds": 15.0
+  },
+  {
+   "run_id": "local131__r02",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 1,
+    "error_info": null
+   },
+   "n_steps": 3,
+   "input_tokens": 6794,
+   "output_tokens": 481,
+   "cost_usd": 0.000559,
+   "seconds": 16.7
+  },
+  {
+   "run_id": "local131__r03",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 0,
+    "error_info": "Result Error"
+   },
+   "n_steps": 3,
+   "input_tokens": 5951,
+   "output_tokens": 483,
+   "cost_usd": 0.000468,
+   "seconds": 15.1
+  }
+ ]
+}

@@ -109,9 +109,9 @@ def check_verdicts(args: dict, cids: list[str]) -> str | None:
     return f"missing verdicts for candidates {missing}" if missing else None
 
 
-def judge_question(qid: str, task, client, max_steps: int, token_budget: int, obs_max_chars: int) -> dict:
-    packet = (REPO / "audit" / "packets" / f"{qid}.md").read_text(encoding="utf-8")
-    cdir = REPO / "audit" / "candidates" / qid
+def judge_question(qid: str, task, client, max_steps: int, token_budget: int, obs_max_chars: int, audit_dir: str = "audit") -> dict:
+    packet = (REPO / audit_dir / "packets" / f"{qid}.md").read_text(encoding="utf-8")
+    cdir = REPO / audit_dir / "candidates" / qid
     cids = sorted(p.stem for p in cdir.glob("*.csv"))
     messages = [{"role": "system", "content": SYSTEM},
                 {"role": "user", "content": packet + f"\n\nCandidate ids: {', '.join(cids)}"}]
@@ -252,7 +252,7 @@ def _as_completed(futs):
 
 def _safe(q, task, client, cfg):
     try:
-        return judge_question(q, task, client, cfg["max_steps"], cfg["token_budget"], cfg.get("obs_max_chars", 6000))
+        return judge_question(q, task, client, cfg["max_steps"], cfg["token_budget"], cfg.get("obs_max_chars", 6000), cfg.get("audit_dir", "audit"))
     except Exception as e:  # harness errors are recorded, never treated as verdicts
         return {"qid": q, "status": "harness_error", "error": repr(e)[:2000], "cost_usd": 0.0}
 

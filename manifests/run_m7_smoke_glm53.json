@@ -1,0 +1,179 @@
+{
+ "run_name": "m7_smoke_glm53",
+ "date": "2026-11-10",
+ "model": "z-ai/glm-5.3",
+ "temperature": 0.7,
+ "prompt_version": "v1",
+ "cost_source": "provider (OpenRouter usage)",
+ "total_cost_usd": 0.0743,
+ "runs": [
+  {
+   "run_id": "local004__r00",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 0,
+    "error_info": "Result Error"
+   },
+   "n_steps": 5,
+   "input_tokens": 6834,
+   "output_tokens": 1650,
+   "cost_usd": 0.006834,
+   "seconds": 62.1
+  },
+  {
+   "run_id": "local004__r01",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 1,
+    "error_info": null
+   },
+   "n_steps": 4,
+   "input_tokens": 4784,
+   "output_tokens": 2745,
+   "cost_usd": 0.012063,
+   "seconds": 66.2
+  },
+  {
+   "run_id": "local004__r02",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 1,
+    "error_info": null
+   },
+   "n_steps": 2,
+   "input_tokens": 2485,
+   "output_tokens": 567,
+   "cost_usd": 0.001237,
+   "seconds": 18.7
+  },
+  {
+   "run_id": "local004__r03",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 1,
+    "error_info": null
+   },
+   "n_steps": 4,
+   "input_tokens": 5492,
+   "output_tokens": 2079,
+   "cost_usd": 0.005913,
+   "seconds": 39.9
+  },
+  {
+   "run_id": "local023__r01",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 0,
+    "error_info": "Result Error"
+   },
+   "n_steps": 3,
+   "input_tokens": 3813,
+   "output_tokens": 1569,
+   "cost_usd": 0.00577,
+   "seconds": 17.3
+  },
+  {
+   "run_id": "local023__r00",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 0,
+    "error_info": "Result Error"
+   },
+   "n_steps": 7,
+   "input_tokens": 16695,
+   "output_tokens": 4286,
+   "cost_usd": 0.017132,
+   "seconds": 50.4
+  },
+  {
+   "run_id": "local023__r03",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 0,
+    "error_info": "Result Error"
+   },
+   "n_steps": 4,
+   "input_tokens": 5828,
+   "output_tokens": 2187,
+   "cost_usd": 0.008566,
+   "seconds": 28.9
+  },
+  {
+   "run_id": "local131__r00",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 1,
+    "error_info": null
+   },
+   "n_steps": 2,
+   "input_tokens": 3214,
+   "output_tokens": 353,
+   "cost_usd": 0.001722,
+   "seconds": 5.6
+  },
+  {
+   "run_id": "local131__r01",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 1,
+    "error_info": null
+   },
+   "n_steps": 2,
+   "input_tokens": 3142,
+   "output_tokens": 392,
+   "cost_usd": 0.002917,
+   "seconds": 7.5
+  },
+  {
+   "run_id": "local131__r02",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 0,
+    "error_info": "Result Error"
+   },
+   "n_steps": 2,
+   "input_tokens": 3059,
+   "output_tokens": 342,
+   "cost_usd": 0.002437,
+   "seconds": 6.2
+  },
+  {
+   "run_id": "local131__r03",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 0,
+    "error_info": "Result Error"
+   },
+   "n_steps": 4,
+   "input_tokens": 7069,
+   "output_tokens": 551,
+   "cost_usd": 0.002202,
+   "seconds": 8.7
+  },
+  {
+   "run_id": "local023__r02",
+   "status": "submitted",
+   "benchmark_label": {
+    "status": "scored",
+    "score": 0,
+    "error_info": "Result Error"
+   },
+   "n_steps": 4,
+   "input_tokens": 4063,
+   "output_tokens": 2619,
+   "cost_usd": 0.007518,
+   "seconds": 70.2
+  }
+ ]
+}

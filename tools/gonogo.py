@@ -204,10 +204,11 @@ def main():
     ap.add_argument("--delta", type=float, default=0.1)
     ap.add_argument("--R", type=int, default=2000)
     ap.add_argument("--seed", type=int, default=20261105)
+    ap.add_argument("--run", default=RUN, help="run folder under runs/ (default: the Haiku M3 run)")
     ap.add_argument("--out", default=None)
     a = ap.parse_args()
 
-    qs = load_questions()
+    qs = load_questions(a.run)
     bench = {q: v["bench_correct"] for q, v in qs.items()}
     audit = load_audit_labels(qs) if "audit" in (a.calib_labels, a.test_labels) else None
     judge = human = correction = None
@@ -260,7 +261,7 @@ def main():
 
     k_dist = Counter(v["k"] for v in qs.values())
     base_err = sum(1 for v in qs.values() if v["k"] > 0 and v["bench_correct"] is False) / sum(1 for v in qs.values() if v["k"] > 0)
-    report = {"run": RUN, "calib_labels": a.calib_labels, "test_labels": a.test_labels, "delta": a.delta,
+    report = {"run": a.run, "calib_labels": a.calib_labels, "test_labels": a.test_labels, "delta": a.delta,
               "R": a.R, "seed": a.seed, "n_questions": len(qs), "k_distribution": dict(sorted(k_dist.items())),
               "modal_answer_benchmark_error": round(base_err, 3), "results": {}}
     for alpha in [float(x) for x in a.alphas.split(",")]:

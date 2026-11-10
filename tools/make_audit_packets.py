@@ -14,7 +14,8 @@ Outputs (audit/packets, audit/candidates and audit/key.json are git-ignored; the
   audit/questions_<ann>.csv         question template (committed)
   manifests/audit_freeze.json       order, A2 subset, pilot, seeds, sha256 of key and packets (committed)
 
-Run: .venv/Scripts/python.exe tools/make_audit_packets.py [run_name]
+Run: .venv/Scripts/python.exe tools/make_audit_packets.py [run_name [audit_folder]]
+(default folder `audit` is the frozen Haiku audit: never run another agent into it; pass e.g. audit_glm53)
 """
 from __future__ import annotations
 
@@ -35,7 +36,9 @@ from sqlabst.data import GOLD_CSV_DIR, REPO, load_tasks  # noqa: E402
 RUN = sys.argv[1] if len(sys.argv) > 1 else "m3_haiku55_t07"
 SEED = 20261104
 SHOW_ROWS = 50
-AUDIT = REPO / "audit"
+AUDIT_NAME = sys.argv[2] if len(sys.argv) > 2 else "audit"   # use a different folder for any run other than the frozen Haiku one
+AUDIT = REPO / AUDIT_NAME
+FREEZE_NAME = "audit_freeze.json" if AUDIT_NAME == "audit" else f"audit_freeze_{AUDIT_NAME}.json"
 ANNOTATORS = ["A1"]                 # A2 template is written for the A2 subset only
 A2_PER_FOLD = 8                     # ~30% of 135, stratified by fold
 N_PILOT = 5
@@ -203,7 +206,7 @@ def main():
         "key_sha256": hashlib.sha256(key_bytes).hexdigest(),
         "packets_sha256": hashlib.sha256(json.dumps(packet_hashes, sort_keys=True).encode()).hexdigest(),
     }
-    (REPO / "manifests" / "audit_freeze.json").write_text(json.dumps(freeze, indent=1), encoding="utf-8")
+    (REPO / "manifests" / FREEZE_NAME).write_text(json.dumps(freeze, indent=1), encoding="utf-8")
     print(json.dumps({k: freeze[k] for k in ["stats", "pilot", "fallback_folds", "fold_order", "key_sha256"]}, indent=1))
     print("A2 subset:", len(a2), "questions; label rows A1:", len(rows_sorted))
 

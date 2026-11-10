@@ -1,0 +1,29 @@
+{
+ "run_name": "judge_gemini38flash_glm53",
+ "comment": "PAID: Gemini 3.8 Flash judge on the GLM-5.3 audit packets (audit_glm53). User go 2026-11-10 ('Yes, both judges'); combined cap $14 with the Sol judge. Estimate about $6.3. RETRY 2026-11-10: the first pass finished at $6.4867 with 7 of 135 questions unfinished (4 token_budget, 3 step_limit); retry those 7 with token_budget raised from 200000 to 300000 (documented deviation), same $8 cumulative cap, in the same run folder.",
+ "judge_llm": {
+  "provider": "openrouter",
+  "model": "google/gemini-3.8-flash",
+  "price_in_per_m": 0.825,
+  "price_out_per_m": 4.125,
+  "temperature": 0.0,
+  "max_output_tokens": 4096,
+  "retries": 5,
+  "backoff_cap_s": 60
+ },
+ "max_steps": 26,
+ "token_budget": 300000,
+ "obs_max_chars": 6000,
+ "questions": [
+  "local096",
+  "local098",
+  "local253",
+  "local286",
+  "local309",
+  "local331",
+  "local354"
+ ],
+ "workers": 4,
+ "spend_cap_usd": 8.0,
+ "audit_dir": "audit_glm53"
+}

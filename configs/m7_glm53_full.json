@@ -1,0 +1,25 @@
+{
+ "run_name": "m7_glm53_full",
+ "comment": "PAID second-agent collection: all 135 Spider 2.0-Lite SQLite tasks x 8 runs of z-ai/glm-5.3, same harness settings as the Haiku run (configs/m3_haiku.json). User go 2026-11-10 ('Yes, run it'), hard cap $9, then raised to a cumulative $16 on 2026-11-10 (user go 'Yes, finish it', $7 more) after the first session stopped at the cap with 643 of 1,080 runs ($8.92); the runner resumes and counts earlier spend. Estimate about $6.3 (range $5-9) from the GLM smoke test (manifests/run_m7_smoke_glm53.json). Price from the OpenRouter listing 2026-11-10. Second raise: cumulative cap $19 on 2026-11-10 (user go 'Yes, finish it', about $3 more) after the run stopped again at $15.91 with 968 of 1,080 runs. Third raise: cumulative cap $21 on 2026-11-10 (user go 'Yes, finish it', about $2 more) after the run stopped at $19.09 with 1,069 of 1,080 runs.",
+ "agent_llm": {
+  "provider": "openrouter",
+  "model": "z-ai/glm-5.3",
+  "price_in_per_m": 0.0699,
+  "price_out_per_m": 1.4,
+  "temperature": 0.7,
+  "max_output_tokens": 2048,
+  "retries": 5,
+  "backoff_cap_s": 60
+ },
+ "agent": {
+  "max_steps": 15,
+  "token_budget": 120000,
+  "row_cap": 50,
+  "sql_timeout_s": 30,
+  "obs_max_chars": 6000
+ },
+ "runs_per_task": 8,
+ "seed_base": 0,
+ "workers": 4,
+ "spend_cap_usd": 21.0
+}
